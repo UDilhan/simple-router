@@ -1,0 +1,8 @@
+RewriteEngine On
+Options +FollowSymlinks
+
+#Views
+RewriteRule	^view/(.*)$	index.php?view=$1	[L]
+
+#Errors
+RewriteRule	^error/([0-9]{3})$	index.php?view=error&code=$1	[L]
