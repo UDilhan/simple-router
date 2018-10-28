@@ -1,0 +1,12 @@
+{
+  "name": "App/Master",
+  "description": "App",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Ulutas Dilhan",
+      "email": "dilhan@systemstatus.be"
+    }
+  ]
+}

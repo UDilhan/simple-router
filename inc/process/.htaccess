@@ -1,0 +1,4 @@
+#Access limited to POST requests
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD} !=POST
+RewriteRule ^.*$ /
