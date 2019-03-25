@@ -1,0 +1,7 @@
+
+.gitignore
+inc/assets/
+.idea/
+!/inc/assets/css/
+!/inc/assets/img/
+!/inc/assets/js/

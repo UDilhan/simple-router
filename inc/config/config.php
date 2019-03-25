@@ -36,11 +36,13 @@ return [
 	"APP_MAX_UPLOAD_FILE_SIZE" => 300, //kilo bytes
 	"PROCESS_DIRECTORY"        => ".",
 	"LAYOUTS_DIRECTORY"        => "../../inc/layouts",
+	"APP_RESOURCES"            => APP_URL . "/resources",
+	"VIEWS_DIRECTORY"          => __DIR__ . "/../views",
+	"DEFAULT_PAGE"             => "home",
 	"DEBUG_MODE"               => FALSE,
 	"ALLOW_AUTOLOADER"         => FALSE,
 	"ALLOW_MCV_AUTOLOADER"     => FALSE,
-	"LOAD_COMPOSER"            => TRUE,
-	"APP_RESOURCES"            => APP_URL . "/resources",
+	"LOAD_COMPOSER"            => FALSE,
 
 	//===============================================================
 	//                        EXT SERVICES KEYS

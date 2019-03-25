@@ -16,18 +16,21 @@ define("APP_CONFIG", require("../config/config.php")); // <---- Edit this file f
 if (APP_CONFIG[ 'ALLOW_AUTOLOADER' ])
 
 	spl_autoload_register(function ($class) {
-		include 'inc/class/' . $class . '.php';
+		include '../class/' . $class . '.php';
 	});
 
 else if (APP_CONFIG[ 'ALLOW_MCV_AUTOLOADER' ]) {
 	spl_autoload_register(function ($class) {
-		include 'inc/class/' . $class . '.php';
+		if (is_file('../class/' . $class . '.php'))
+			include '../class/' . $class . '.php';
 	});
 	spl_autoload_register(function ($class) {
-		include 'inc/controllers/' . $class . '.php';
+		if (is_file('../controllers/' . $class . '.php'))
+			include '../controllers/' . $class . '.php';
 	});
 	spl_autoload_register(function ($class) {
-		include 'inc/middlewares/' . $class . '.php';
+		if (is_file('../middlewares/' . $class . '.php'))
+			include '../middlewares/' . $class . '.php';
 	});
 }
 
