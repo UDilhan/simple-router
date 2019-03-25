@@ -88,7 +88,7 @@ if (!isset($_GET[ 'view' ]) || empty($_GET[ 'view' ])) {
 	 *	Requested view isn't found in the views directory
 	 *  => redirect to error view with 404 code
 	 */
-	header('Location: ' . APP_CONFIG[ 'APP_URL' ] . '/' . APP_CONFIG[ 'DEFAULT_PAGE' ]);
+	header('Location: ' . APP_CONFIG[ 'APP_URL' ] . '/app/' . APP_CONFIG[ 'DEFAULT_PAGE' ]);
 	exit;
 
 }
