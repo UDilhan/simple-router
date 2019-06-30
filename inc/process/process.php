@@ -8,6 +8,9 @@ session_start(); //launch session
 //===============================================================
 
 define("APP_CONFIG", require("../config/config.php")); // <---- Edit this file for app configuration
+define('APP_URL', APP_CONFIG[ 'APP_URL' ]);
+define('APP_PROCESS', APP_CONFIG[ 'APP_URL' ] . '/process');
+define('APP_RESOURCES', APP_CONFIG[ 'APP_RESOURCES' ]);
 
 //===============================================================
 //                        Load resources
