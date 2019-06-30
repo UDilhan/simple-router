@@ -48,13 +48,13 @@ define('APP_RESOURCES', APP_CONFIG[ 'APP_RESOURCES' ]);
 if (APP_CONFIG[ 'ALLOW_AUTOLOADER' ])
 
 	spl_autoload_register(function ($class) {
-		include 'inc/class/' . $class . '.php';
+		include 'inc/classes/' . $class . '.php';
 	});
 
 else if (APP_CONFIG[ 'ALLOW_MCV_AUTOLOADER' ]) {
 	spl_autoload_register(function ($class) {
-		if (is_file('inc/class/' . $class . '.php'))
-			include 'inc/class/' . $class . '.php';
+		if (is_file('inc/classes/' . $class . '.php'))
+			include 'inc/classes/' . $class . '.php';
 	});
 	spl_autoload_register(function ($class) {
 		if (is_file('inc/controllers/' . $class . '.php'))
