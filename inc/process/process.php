@@ -11,7 +11,6 @@ define("APP_CONFIG", require("../config/config.php")); // <---- Edit this file f
 define('APP_URL', APP_CONFIG[ 'APP_URL' ]);
 define('APP_PROCESS', APP_CONFIG[ 'APP_URL' ] . '/process');
 define('APP_RESOURCES', APP_CONFIG[ 'APP_RESOURCES' ]);
-
 //===============================================================
 //                        Load resources
 //===============================================================
@@ -19,13 +18,13 @@ define('APP_RESOURCES', APP_CONFIG[ 'APP_RESOURCES' ]);
 if (APP_CONFIG[ 'ALLOW_AUTOLOADER' ])
 
 	spl_autoload_register(function ($class) {
-		include '../class/' . $class . '.php';
+		include '../classes/' . $class . '.php';
 	});
 
 else if (APP_CONFIG[ 'ALLOW_MCV_AUTOLOADER' ]) {
 	spl_autoload_register(function ($class) {
-		if (is_file('../class/' . $class . '.php'))
-			include '../class/' . $class . '.php';
+		if (is_file('../classes/' . $class . '.php'))
+			include '../classes/' . $class . '.php';
 	});
 	spl_autoload_register(function ($class) {
 		if (is_file('../controllers/' . $class . '.php'))
