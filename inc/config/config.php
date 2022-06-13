@@ -10,7 +10,7 @@ return [
 	//                        APP CONFIG
 	//===============================================================
 
-	"APP_URL" => "",
+	"APP_URL" => "http://localhost",
 
 	//===============================================================
 	//                        DATABASE
@@ -35,8 +35,8 @@ return [
 
 	"APP_MAX_UPLOAD_FILE_SIZE" => 300, //kilo bytes
 	"PROCESS_DIRECTORY"        => ".",
-	"LAYOUTS_DIRECTORY"        => "../../inc/layouts",
-	"APP_RESOURCES"            => APP_URL . "/resources",
+	"LAYOUTS_DIRECTORY"        => __DIR__ ."/../layouts",
+	"APP_RESOURCES"            => "http://localhost/reparation/resources",
 	"VIEWS_DIRECTORY"          => __DIR__ . "/../views",
 	"DEFAULT_PAGE"             => "home",
 	"DEBUG_MODE"               => FALSE,
